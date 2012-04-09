@@ -1,0 +1,9 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<label>Select the location</label>
+<%= select_tag "location", options_for_select([ "Show_all_location","101", "102", "103","104"] ), :onChange => "call_some_function()" %>
+<label>Select your preferences</label>
+<%= select_tag "days", options_for_select([ "Week", "Month", "3_Months","Year"] ), :onChange => "call_some_function()" %>
+<div id="map_show">
+<%= render "/home/graph" if @multi == 0 %>
+<%= render "/home/multi_graph" if @multi == 1 %>
+</div>

@@ -1,0 +1,6 @@
+$("#map_show").html(" ");
+<% if @multi == 0 %>
+$("#map_show").html("<%= escape_javascript(render('/processor/graph')) %>");
+<% else %>
+$("#map_show").html("<%= escape_javascript(render('/processor/multi_graph')) %>");
+<% end %>
