@@ -9838,3 +9838,26 @@ Processing HomeController#index (for 127.0.0.1 at 2012-04-09 21:01:14) [GET]
 Rendering home/index
 Rendered home/_multi_graph (0.6ms)
 Completed in 60ms (View: 3, DB: 33) | 200 OK [http://localhost/home/index?location=101%20&days=Month]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-04-10 03:22:57) [GET]
+  [4;36;1mReceipt Load (29.2ms)[0m   [0;1mSELECT date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg FROM "receipts" GROUP BY date ORDER BY date desc LIMIT 7[0m
+Rendering home/index
+Rendered home/_multi_graph (18.9ms)
+Completed in 107ms (View: 61, DB: 29) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-04-10 03:23:03) [GET]
+  Parameters: {"location"=>"Show_all_location ", "days"=>"Month"}
+  [4;35;1mReceipt Load (24.4ms)[0m   [0mSELECT date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg FROM "receipts" GROUP BY date ORDER BY date desc LIMIT 30[0m
+Rendering home/index
+Rendered home/_multi_graph (0.6ms)
+Completed in 51ms (View: 3, DB: 24) | 200 OK [http://localhost/home/index?location=Show_all_location%20&days=Month]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-04-10 03:23:05) [GET]
+  Parameters: {"location"=>"Show_all_location ", "days"=>"Year"}
+  [4;36;1mReceipt Load (28.6ms)[0m   [0;1mSELECT date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg FROM "receipts" GROUP BY date ORDER BY date desc LIMIT 365[0m
+Rendering home/index
+Rendered home/_multi_graph (0.6ms)
+Completed in 99ms (View: 3, DB: 29) | 200 OK [http://localhost/home/index?location=Show_all_location%20&days=Year]

@@ -19,10 +19,10 @@ class HomeController < ApplicationController
 			end
 #render  :text => limit_rec and return
          if location_id.nil? || location_id == "Show_all_location "                     	
-         	@first_seventh = Receipt.all(:select => "date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg",:group => "date", :limit => "#{limit_rec}", :order => "id desc")       	
+         	@first_seventh = Receipt.all(:select => "date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg",:group => "date", :limit => "#{limit_rec}", :order => "date desc")       	
          	@multi = 1 # This is to hide the text in x-axis as it becomes messed   		
          else  			
-  			@first_seventh = Receipt.all(:select => "date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg",:conditions => ["location_id = ?", location_id],:group => "date", :limit => "#{limit_rec}", :order => "id desc")
+  			@first_seventh = Receipt.all(:select => "date, sum(q_1) as q_1, sum(q_2) as q_2, sum(q_3) as q_3, sum(avg) as avg",:conditions => ["location_id = ?", location_id],:group => "date", :limit => "#{limit_rec}", :order => "date desc")
   			@multi = 0  
   		 end  	 		 	 
 	  	dates = []
