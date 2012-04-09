@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	  	@title = "Test application Graph"
+  	 @title = "Test application Graph"
          location_id = params[:location]
          days = params[:days]
          #render :text => days and return
@@ -64,7 +64,7 @@ avg << f_s.avg
       begin
          	  require 'rubygems'
          	  require 'roo'
-         	   oo = Excelx.new("http://dl.dropbox.com/u/71317935/recordlist.xlsx")          
+         	  oo = Excelx.new("http://dl.dropbox.com/u/71317935/recordlist.xlsx")          
          	  oo.default_sheet = oo.sheets.second		  
          	  2.upto(oo.last_row) do |line|
          	   id = oo.cell(line, 'A')
