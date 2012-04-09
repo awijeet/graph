@@ -59,6 +59,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rails (~> 2.3.14)
+  rails (~> 2.3.5)
   roo
   sqlite3-ruby

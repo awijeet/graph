@@ -1,7 +1,12 @@
 source :gemcutter
-gem "rails", "~> 2.3.14"
+gem "rails", "~> 2.3.5"
 gem "sqlite3-ruby", :require => "sqlite3"
 gem "roo"
+#gem "mysql"
+#gem "mini_fb"
+#gem "json"
+#gem "will_paginate", "~> 2.3.16"
+#gem "sendmail"
 # bundler requires these gems in all environments
 # gem "nokogiri", "1.4.2"
 # gem "geokit"
